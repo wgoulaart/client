@@ -7,9 +7,10 @@ describe('<Logo />', () => {
     // 1.Render component `render`
     renderWithTheme(<Logo />)
     // 2. Selecionar o elemento a ser testado `Screen (queries) - getByLabel...`
-    expect(screen.getByLabelText(/won-games/i).parentElement).toHaveStyle({
+    const logoComponent = screen.getByLabelText(/won-games/i).parentElement
+    // 3. Expection -  assertion test
+    expect(logoComponent).toHaveStyle({
       color: '#FAFAFA'
     })
-    // 3. Expection -  assertion test
   })
 })
